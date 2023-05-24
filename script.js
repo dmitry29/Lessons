@@ -1264,3 +1264,883 @@
 // console.log(formatMessage('1234567890', 7))
 
 // -------------------------
+
+// num = 15;
+// for(num = 0; num <= 15; num += 1)
+
+// console.log(num)
+
+// -------------------------
+
+// const max = 12;
+// for (let i = 0; i < max; i += 1) {
+//   console.log(`${max} % ${i} = `, max % i);
+// }
+
+
+// for (let i = 0; i <= 5; i += 1) {
+//         console.log(i);
+      
+//         if (i === 3) {
+//           console.log("Нашли число 3, прерываем выполнение цикла");
+//           break;
+//         }
+//       }
+      
+//       console.log("Лог после цикла");
+
+// ----------------------------
+
+// const number = 10;
+
+// for (let i = 0; i < number; i += 1) {
+//   if (i % 2 === 0) { 
+//     continue;
+//   }
+
+
+//   console.log("Нечетное число: ", i); // 1, 3, 5, 7, 9
+// }
+
+// function checkPassword(password){
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+//   let message;
+//    message = password === ADMIN_PASSWORD ? "Access is allowed" : "Access denied, wrong password!"
+//    return message;
+// }
+
+// console.log(checkPassword("jqueryismyjam"));
+// console.log(checkPassword("angul4r1sl1f3"));
+// console.log(checkPassword("r3actsux"));
+
+// -----------------------MASSIVE
+
+// const clients = ["Mango", "Poly", "Ajax"];
+// const lastElementIndex = clients.length - 1;
+
+
+
+// clients[0] = "Apple";
+// clients[1] = "Pango";
+// clients[3] = "Kiwi";
+
+
+
+// console.log(lastElementIndex);
+// console.log(clients); 
+// console.log(clients.length);
+// console.log(clients[lastElementIndex]);
+
+// for (let i = 0; i < clients.length; i += 1) {
+//   console.log(clients[i]);
+// }
+
+// for (const client of clients) {
+//   console.log(client)
+// }
+
+// const string = "javascript";
+
+// for (const character of string) {
+//   console.log(character);
+// }
+
+// -------------------------
+
+
+// const clients = ["Mango", "Poly", "Ajax"];
+// const clientNameToFind = "Polyna";
+// let message = "Клиента с таким именем нету в базе данных!";
+
+// for (const client of clients) {
+//   if (client === clientNameToFind) {
+//     message = "Клиент с таким именем есть в базе данных!";
+//     break;
+//   }
+//   // Если не совпадает, то на этой итерации ничего не делаем
+// }
+
+// console.log(message); // Клиент с таким именем есть в базе данных!
+
+// --------------------------
+
+// const numbers = [1, 3, 14, 18, 4, 7, 29, 6, 34];
+// const threshold = 5;
+
+// // Для чисел меньше чем порог срабатывает continue, выполнение тела прекращается
+// // и управление передаётся на следующую итерацию.
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] < threshold) {
+//     continue;
+//   }
+
+//   console.log(`Число больше чем ${threshold}: ${numbers[i]}`); // 18, 29, 34
+// }
+
+// -------------------------------
+
+// function getSubscriptionPrice(type) {
+//   let price
+
+//   switch(type){
+//     case "starter":
+//     price = 0;
+//     break;
+
+//     case "professional":
+//     price = 20;
+//     break;
+
+//     case "organization":
+//     price = 50; 
+//     break;
+    
+//   }
+//   return price
+  
+// }
+
+// console.log(getSubscriptionPrice("starter"));
+// console.log(getSubscriptionPrice("professional"));
+// console.log(getSubscriptionPrice("organization"));
+
+// -----------------------
+
+// function checkPassword(password){
+//   const ADMIN_PASSWORD = "jqueryismyjam"
+//   let message;
+
+//   switch(password){
+//     case null:
+//       message = "Canceled by user!";
+//       break;
+
+//     case ADMIN_PASSWORD:
+//       message = "Welcome!"
+//       break;
+
+//     default:
+//     message = "Access denied, wrong password!";
+
+//   }
+//    return message;
+// }
+
+// console.log(checkPassword("mangohackzor"));
+// console.log(checkPassword("null"));
+// console.log(checkPassword("polyhax"));
+// console.log(checkPassword("jqueryismyjam"));
+
+// -------------------------
+
+// function getShippingCost(country){
+//   let message;
+  
+// switch (country){
+//   case "China":
+//     message = "Shipping to China will cost 100 credits"
+//     break;
+
+//   case "Chile":
+//     message = "Shipping to Chile will cost 250 credits"
+//     break;
+
+//   case "Australia":
+//     message = "Shipping to Australia will cost 170 credits"
+//     break;
+
+//   case "Jamaica":
+//     message = "Shipping to Jamaica  will cost 120 credits"
+//     break;
+
+//   default:
+//     message = "Sorry, there is no delivery to your country";
+// }
+
+//   return message;
+
+// }
+
+// console.log(getShippingCost("Australia"));
+// console.log(getShippingCost("Germany"));
+// console.log(getShippingCost("China"));
+// console.log(getShippingCost("Chile"));
+// console.log(getShippingCost("Jamaica"));
+// console.log(getShippingCost("Sweden"));
+
+// ---------------------------
+
+// function getNameLength(name){
+//   let length;
+
+//   switch (name){
+
+//     case "Poly":
+//       length = 4;
+//       break;
+
+//       case "Harambe":
+//         length = 7;
+//         break;  
+
+//         case "Billy":
+//           length = 5;
+//         break;
+
+//         case "Joe":
+//         length = 3;
+//         break;
+//   }
+
+//   const message = `Name ${name} is ${length} characters long`;
+
+//   return message;
+// }
+
+// console.log(getNameLength("Poly"));
+// console.log(getNameLength("Harambe"));
+// console.log(getNameLength("Billy"));
+// console.log(getNameLength("Joe"));
+
+// -----------------------split & join 
+
+
+// const name = "Mango";
+// console.log(name.split("")); // ["M", "a", "n", "g", "o"]
+
+// const message = "JavaScript это интересно";
+// console.log(message.split(" ")); // ["JavaScript", "это", "интересно"]
+
+// const name = ["M", "a", "n", "g", "o"];
+// console.log(name.join(''))
+
+// const message = ["JavaScript", "это", "интересно"];
+// console.log(message.join(' '))
+
+// -------------indexOf & includes
+
+// Используйте indexOf тогда, когда необходимо получить непосредственно индекс элемента.
+
+// const clients = ["Mango", "Ajax", "Poly", "Kiwi"];
+// console.log(clients.indexOf("Poly")); // 2
+// console.log(clients.indexOf("Monkong")); // -1
+
+// Область применения includes сводится к ситуациям когда необходимо проверить есть ли элемент в массиве и не важна его позиция (индекс).
+
+// const clients = ["Mango", "Ajax", "Poly", "Kiwi"];
+// console.log(clients.includes("Poly")); // true
+// console.log(clients.includes("Monkong")); // false
+
+
+// const fruit = "apple";
+
+// if (
+//   fruit === "apple" ||
+//   fruit === "strawberry" ||
+//   fruit === "cherry" ||
+//   fruit === "cranberries"
+// ) {
+//   console.log("It is a red fruit!");
+// }
+
+
+// const redFruits = ["apple", "strawberry", "cherry", "cranberries"];
+// const fruit = "cherry";
+// const hasFruit = redFruits.includes(fruit);
+
+// if (hasFruit) {
+//   console.log(`${fruit} is a red fruit!`);
+// }
+
+
+// const funParty = ["Max", "Olga", "Tom", "Jack"];
+// const girl = "Olga";
+// const findGirl = funParty.includes(girl);
+
+// if (findGirl){
+//   console.log(`${girl} is a nice baby!`);
+// }
+
+
+// -----------------push() и pop()
+
+// push() добавляет один или несколько элементов в конец массива
+
+// const numbers = [];
+
+// numbers.push(1);
+// console.log(numbers); // [1]
+
+// numbers.push(2);
+// console.log(numbers); // [1, 2]
+
+// numbers.push(3);
+// console.log(numbers); // [1, 2, 3]
+
+// numbers.push(4);
+// console.log(numbers); // [1, 2, 3, 4]
+
+// numbers.push(5);
+// console.log(numbers); // [1, 2, 3, 4, 5]
+
+// pop() удаляет последний элемент из конца массива и возвращает удаленный элемент. Если массив пустой, метод возвращает undefined.
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// console.log(numbers.pop()); //  5
+// console.log(numbers); // [1, 2, 3, 4]
+
+// console.log(numbers.pop()); //  4
+// console.log(numbers); // [1, 2, 3]
+
+// console.log(numbers.pop()); //  3
+// console.log(numbers); // [1, 2]
+
+// console.log(numbers.pop()); //  2
+// console.log(numbers); // [1]
+
+// console.log(numbers.pop()); //  1
+// console.log(numbers); // []
+
+// --------------------------slice() & splice()
+
+// slice(begin, end) возвращает новый массив, содержащий копию части исходного массива, не изменяя его. Копия делается от begin и до, но не включая, end - индексы элементов исходного массива.
+
+// const clients = ["Mango", "Ajax", "Poly", "Kiwi"];
+// console.log(clients.slice(1, 3)); // ["Ajax", "Poly"]
+
+// const clients = ["Mango", "Ajax", "Poly", "Kiwi"];
+// console.log(clients.slice(1)); // ["Ajax", "Poly", "Kiwi"]
+// console.log(clients.slice(2)); // ["Poly", "Kiwi"]
+
+// const clients = ["Mango", "Ajax", "Poly", "Kiwi"];
+// console.log(clients.slice(-1)); // ["Poly", "Kiwi"]
+
+// splice() Удаляет, добавляет и заменяет элементы в произвольном месте массива.
+
+// const scores = [1, 2, 3, 4, 5];
+
+// // Удаляем три элемента массива, начиная с первого элемента (индекс 0)
+// const deletedScores = scores.splice(0, 3);
+
+// // Теперь массив scores содержит два элемента
+// console.log(scores); // [4, 5]
+
+// // А массив deletedScores содержит три удаленных элемента
+// console.log(deletedScores); // [1, 2, 3]
+
+
+// const colors = ["red", "green", "blue"];
+
+// colors.splice(1, 0, "yellow", "pink");
+// console.log(colors); // ["red", "yellow", "pink", "green", "blue"]
+
+// ---------------------concat()
+
+// Объединяет два или более массива в один. Он не изменяет массив на котором вызывается, а возвращает новый. Порядок аргументов метода влияет на порядок элементов нового массива.
+
+// const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"];
+// const newClients = ["Monkong", "Singu"];
+
+// const allClientsWithOldFirst = oldClients.concat(newClients);
+// console.log(allClientsWithOldFirst); // ["Mango", "Ajax", "Poly", "Kiwi", "Monkong", "Singu"]
+
+// const allClientsWithNewFirst = newClients.concat(oldClients);
+// console.log(allClientsWithNewFirst); // ["Monkong", "Singu", "Mango", "Ajax", "Poly", "Kiwi"]
+
+// console.log(oldClients); // ["Mango", "Ajax", "Poly", "Kiwi"]
+// console.log(newClients); // ["Monkong", "Singu"]
+
+// --------------------------
+// const courseTopic = 'JavaScript essentials' 
+
+// const courseTopicLength = courseTopic.length;
+// const firstElement = courseTopic[0];
+// const lastElement = courseTopic[courseTopicLength - 1];
+
+// console.log(courseTopicLength);
+// console.log(firstElement);
+// console.log(lastElement);
+
+// -----------------------
+
+// function getSubstring(string, length){
+//   const substring = string.slice(string, length);
+//   return substring;
+// }
+// console.log(getSubstring("Hello world", 3))
+// console.log(getSubstring("Hello world", 6))
+// console.log(getSubstring("Hello world", 8))
+// console.log(getSubstring("Hello world", 11))
+// console.log(getSubstring("Hello world", 0))
+
+// ---------------------------
+
+// Функция formatMessage(message, maxLength) принимает строку (параметр message) и форматирует её, если длина превышает значение в параметре maxLength.
+
+// Дополни код функции так, что если длина строки:
+
+// не превышает maxLength, функция возвращает её в исходном виде.
+// больше maxLength, то функция обрезает строку до maxLength символов и добавляет в конец троеточие "...", после чего возвращает укороченную версию.
+
+// function formatMessage(message, maxLength){
+
+// let result
+
+// if(message.length <= maxLength){
+//         result = message;
+// } else {
+//         result = message.slice(0, maxLength) + `...`;
+// }
+//    return result    
+// }
+
+// console.log(formatMessage("Curabitur ligula sapien", 16));
+// console.log(formatMessage("Curabitur ligula sapien", 23));
+// console.log(formatMessage("Vestibulum facilisis purus nec", 20));
+// console.log(formatMessage("Vestibulum facilisis purus nec", 30));
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 15));
+// console.log(formatMessage("Nunc sed turpis a felis in nunc fringilla", 41));
+
+// -----------------------------
+
+// function normalizeInput(input){
+//         // const normalizeInput = input.toUpperCase()
+//         const normalizeInput = input.toLowerCase()
+       
+//         return normalizeInput;
+// }
+// console.log(normalizeInput("Hello world"));
+// console.log(normalizeInput("This ISN'T SpaM"));
+// console.log(normalizeInput("Big SALE"));
+
+// ---------------------------
+
+// Функция checkForName(fullname, name) принимает два параметра и возвращает буль true или false - результат проверки вхождения подстроки name в строку fullname.
+// fullname - полное имя состоящее из двух слов (имени и фамилии) разделённых пробелом.
+// name - имя для проверки вхождения в полное имя.
+// Присвой переменной result выражение проверки вхождения имени (параметр name), в полное имя (параметр fullname). Пусть функция строго относится к регистру букв, то есть «Петя» и «петя» для неё разные имена.
+
+// function checkForName(fullname, name){
+
+//          const result = (fullname.includes(name));
+//          return result;
+
+// }
+// console.log(checkForName("Egor Kolbasov", "Egor"));
+// console.log(checkForName("Egor Kolbasov", "egor"));
+// console.log(checkForName("Egor Kolbasov", "egOr"));
+// console.log(checkForName("Egor Kolbasov", "Zhenya"));
+// console.log(checkForName("Vadim Nekrasov", "Vadim"));
+// console.log(checkForName("Vadim Nekrasov", "vadim"));
+// console.log(checkForName("Vadim Nekrasov", "Dima"));
+
+// ---------------------------
+
+// Функция checkForSpam(message) принимает строку (параметр message), проверяет её на содержание запрещенных слов spam и sale, и возвращает результат проверки. 
+// Слова в строке параметра message могут быть в произвольном регистре, например SPAM или sAlE.
+// Если нашли запрещенное слово (spam или sale) то функция возвращает буль true.
+// Если в строке нет запрещенных слов, функция возвращает буль false.
+
+// function checkForSpam(message) {
+//         let result;
+       
+//       const messageToLowerCase = 
+//       message.toLowerCase();
+      
+//       result = 
+//       messageToLowerCase.includes("spam") || 
+//       messageToLowerCase.includes("sale");
+      
+//         return result;
+//       }
+
+//       console.log(checkForSpam("Latest technology news"));
+//       console.log(checkForSpam("JavaScript weekly newsletter"));
+//       console.log(checkForSpam("Get best sale offers now!"));
+//       console.log(checkForSpam("Amazing SalE, only tonight!"));
+//       console.log(checkForSpam("Trust me, this is not a spam message"));
+//       console.log(checkForSpam("Get rid of sPaM emails. Our book in on sale!"));
+//       console.log(checkForSpam("[SPAM] How to earn fast money?"));
+
+// -----------------------------
+
+// Напиши функцию includes(array, value), которая делает тоже самое, 
+// что и метод массива массив.includes(значение) - проверяет, есть ли 
+// в массиве array значение value, возвращая true если есть и false 
+// в противном случае.
+
+// При выполнении этой задачи в теле функции includes() 
+// нельзя использовать метод массив.includes(значение).
+
+// function includes(array, value){
+
+//         for(let i = 0; i < array.length; i += 1){
+
+//         if(array[i] === value){
+//          return true;
+//         }
+                       
+//         } return false
+//       }
+//       console.log(includes([1, 2, 3, 4, 5], 3));
+//       console.log(includes([1, 2, 3, 4, 5], 17));
+//       console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+//       console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
+//       console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
+//       console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));
+   
+// ------------------------
+
+// function checkAge(age){
+       
+//         if (age >= 18){
+//                 return  "You are an adult"
+//         };
+//         return  "You are a minor"
+// }
+// console.log(checkAge(20));
+// console.log(checkAge(8));
+// console.log(checkAge(14));
+// console.log(checkAge(38));
+
+// ----------------------
+
+// const friends = ["Mango", "Ajax", "Poly", "Kiwi"];
+
+// console.log(friends.length)
+// console.log(friends)
+// console.table(friends)
+// console.log(friends[3])
+
+// const lastIndex = friends.length -1;
+// console.log(lastIndex)
+
+// ---------------------
+
+// const friends = ["Mango", "Ajax", "Poly", "Kiwi"]
+// for(let i = 0; i <= friends.length - 1; i += 1){
+//         friends[i] += ' is best'
+
+//         // console.log[i];
+//         // console.log(friends[i]);
+
+// }
+// console.log(friends)
+
+
+// const friends = ["Mango", "Ajax", "Poly", "Kiwi"]
+
+// for(const friend of friends){
+// console.log(friend)
+// }
+
+// ----------------
+
+// const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90]
+ 
+
+// перебрать массив
+// сделать переменную тотал для цикла
+// каждый элемент приплюсовать к тотал
+
+
+// let total = 0;
+// for(let i = 0; i < cart.length; i += 1){
+//       console.log(cart[i]) ;
+// //       total = total + cart[i];
+//       total += cart[i]; 
+// }
+
+// console.log(`Total: `, total)
+
+
+
+// const cart = [54, 28, 105, 70, 92, 17, 120, 12, 25, 90]
+
+
+// for(let value of cart){
+//     value =  Math.round(value + 1.1)   
+// } 
+// console.log(cart)
+
+
+// -------------------------
+
+
+// const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11]
+
+// переменная total
+// перебрать масив
+// на каждой этерации проверить элемент на четность
+// если четный  плюсуем к total
+
+// let total = 0;
+
+// for(let i = 0; i < numbers.length; i += 1){
+//         const number = numbers[i];
+//         console.log(number);
+
+//         if(number % 2 === 0){
+//                 console.log('Четное!!!!')
+
+//                 total += number
+//         }
+// }
+
+
+// for(const number of numbers){
+//         // console.log(number);
+
+//         if(number % 2 ===0) {
+//                 console.log('Четное!!!!')
+//                 total += number;
+//         }
+// }
+
+
+
+// for(const number of numbers) {
+//         if(number % 2 !== 0){
+//                 console.log('Эту итерацию нужно пропустить!', number);
+//                 continue;
+//         }
+
+//         console.log(`${number} - четное!!!!`)
+//         total += number;
+// }
+
+// console.log('Total: ', total)
+
+// ------------------
+
+// const logins = ['jgkjgkbygkuh', 'khfjygjhgjf', 'hhgouieyurlh', 'ilruetertm'];
+// const loginToFind = 'khfjygjhgjf';
+
+// let message = 'Пользователь ${loginToFind} не найден.';
+
+// for(let i = 0; i < logins.length; i += 1){
+//         const login = logins[i];
+
+//         // if (login !== loginToFind){
+//         //         message = `Пользователь ${loginToFind} не найден.`;
+                
+//         // }else {
+//         //         message = `Пользователь ${loginToFind}  найден.`;
+//         //         break
+//         // }
+
+
+//         if (login === loginToFind){
+//                 message = `Пользователь ${loginToFind}  найден.`;
+//                 break   
+//         } 
+//                 message = `Пользователь ${loginToFind} не найден.`;       
+// }
+
+// console.log(message)
+
+
+
+// for (const login of logins){
+//        console.log('Login: ', login) ;
+//        console.log(`${login} === ${loginToFind}: `, login === loginToFind)
+
+//      if(login === loginToFind){
+//         console.log(`Ура, равны!!!`);
+//         message = `Пользователь ${loginToFind} найден.`
+//         break;
+//      }
+// }
+
+// console.log(message)
+
+
+// const message = logins.includes(loginToFind )
+//         ? `Рользователь ${loginToFind}  найден.` 
+//         : `Рользователь ${loginToFind} не найден.`
+
+// console.log(message);
+
+// -------------------
+
+// function checkAge(age) {
+//         if (age >= 18) { 
+//           return "You are an adult";
+//         } 
+       
+      
+//        return "You are a minor"; 
+//       }
+
+//       console.log(checkAge(20));
+//       console.log(checkAge(8));
+//       console.log(checkAge(14));
+//       console.log(checkAge(38));
+
+
+// -----------------------
+
+// function checkPassword(password){
+//         const ADMIN_PASSWORD = 'jqueryismyjam'
+
+//         if (password === ADMIN_PASSWORD){
+//                 return `Welcome!`
+//         }
+//          return 'Access denied, wrong password!'
+// }
+      
+//         console.log(checkPassword("mangohackzor"));
+//         console.log(checkPassword("polyhax"));
+//         console.log(checkPassword("jqueryismyjam"));
+
+// --------------------------
+
+// function checkStorage(available, ordered) {
+     
+//  if (ordered === 0){
+//       return `Your order is empty!` 
+//  } if (ordered >= available) {
+//       return  `Your order is too large, not enough goods in stock!`
+//  } 
+//       return  `The order is accepted, our manager will contact you`
+   
+// }
+
+// console.log(checkStorage(100, 50));
+// console.log(checkStorage(100, 130));
+// console.log(checkStorage(70, 0));
+// console.log(checkStorage(200, 20));
+// console.log(checkStorage(200, 250));
+// console.log(checkStorage(150, 0));
+
+// -----------------------------
+
+// const numbers = [51, 18, 13, 24, 7, 85, 19]
+// let smallesNumber = numbers[0];
+
+//    for (const number of numbers){
+        
+//         if(number < smallesNumber){
+//                 smallesNumber = number;        
+//         }
+        
+//    }
+//    console.log('smallesNumber: ', smallesNumber);
+
+
+// -------------------
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+// console.log(fruits);
+// console.table(fruits);
+
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+
+// const firstElement = fruits[0]
+// const secondElement = fruits[1]
+// const lastElement = fruits[3]
+
+// console.log(firstElement);
+// console.log(secondElement);
+// console.log(lastElement);
+
+// ----------------------------
+
+// const friends = ['Mango', 'Poly', 'Kiwi', 'Ajax'];
+//  let string = '';
+//  for (const friend of friends) {
+//        string += friend +','; 
+//  }
+//  string = string.slice(0, string.length - 1);
+// const string = friends.join(', ')
+// console.log(string)
+
+// -----------------------
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+// fruits[1] = "peach";
+// fruits[3] = "banana";
+// console.log (fruits[1]);
+// console.log (fruits[3]);
+
+// ------------------
+// const fruits = ["apple", "peach", "pear", "banana", "plum"];
+// const fruitsArrayLength = (fruits.length);
+// console.log(fruits.length)
+
+// --------------------
+// const fruits = ["apple", "peach", "pear", "banana"];
+// const lastElementIndex = fruits.length - 1;
+// const lastElement = fruits[lastElementIndex];
+// console.log(lastElement);
+
+// ---------------------
+
+// function getExtremeElements(array){
+//        let elements;
+
+//      elements = [array[0], array[array.length - 1]];
+
+//      return elements;
+// }
+
+// console.log (getExtremeElements([1,2,3,4,5]));
+// console.log (getExtremeElements(["Earth", "Mars", "Venus"]));
+// console.log (getExtremeElements(["apple", "peach", "pear", "banana"]));
+
+// -----------------------
+
+// function splitMessage(message, delimiter){
+//         let words;
+//       return (message.split(delimiter));
+// }
+// console.log(splitMessage("Mango hurries to the train", " "));
+// console.log(splitMessage("Mango", ""));
+// console.log(splitMessage("best_for_week", "_"));
+
+// ------------------------
+
+// function calculateEngravingPrice(message, pricePerWord){
+//    let word = message.split(" ");
+//    const wordLength = word.split;
+//    const totalPrice = word.length * pricePerWord;
+
+
+//    return totalPrice
+// }
+
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 10));
+// console.log(calculateEngravingPrice("JavaScript is in my blood", 20));
+// console.log(calculateEngravingPrice("Web-development is creative work", 40));
+// console.log(calculateEngravingPrice("Web-development is creative work", 20));
+
+// ----------------------
+
+// function makeStringFromArray(array, delimiter) {
+//         return string = array.join(delimiter)
+         
+// }
+
+// const makeStringFromArray = (array, delimiter) => array.join(delimiter);
+
+
+// console.log(makeStringFromArray(["Mango", "hurries", "to", "the", "train"], " "));
+// console.log(makeStringFromArray(["M", "a", "n", "g", "o"], ""));
+// console.log(makeStringFromArray(["top", "picks", "for", "you"], "_"));
+
+// ------------------------
+
+// function slugify(title) {
+   
+//     return title.toLowerCase().split(' ').join('-')
+
+// }
+
+const slugify = (title) => title.toLowerCase().split(' ').join('-');
+
+console.log(slugify("Arrays for begginers"));
+console.log(slugify("English for developer"));
+console.log(slugify("Ten secrets of JavaScript"));
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
