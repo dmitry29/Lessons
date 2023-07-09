@@ -2138,9 +2138,375 @@
 
 // }
 
-const slugify = (title) => title.toLowerCase().split(' ').join('-');
+// const slugify = (title) => title.toLowerCase().split(' ').join('-');
 
-console.log(slugify("Arrays for begginers"));
-console.log(slugify("English for developer"));
-console.log(slugify("Ten secrets of JavaScript"));
-console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
+// console.log(slugify("Arrays for begginers"));
+// console.log(slugify("English for developer"));
+// console.log(slugify("Ten secrets of JavaScript"));
+// console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
+
+// ---------------------------
+
+// const fruits = ["apple", "plum", "pear", "orange", "banana"];
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, 4);
+// const lastThreeEls = fruits.slice(-3);
+
+// console.log(firstTwoEls);
+// console.log(nonExtremeEls);
+// console.log(lastThreeEls);
+
+// ------------------------
+
+// 1. Объявление параметров x, y, z
+// function multiply(x, y, z) {
+//         console.log(`Результат умножения равен ${x * y * z}`);
+//       }
+      
+//       // 2. Передача аргументов
+//       multiply(2, 3, 5); // Результат умножения равен 30
+//       multiply(4, 8, 12); // Результат умножения равен 384
+//       multiply(17, 6, 25); // Результат умножения равен 2550
+
+// -------------------
+// function count(countFrom = 0, countTo = 10, step = 1) {
+//         console.log(`countFrom = ${countFrom}, countTo = ${countTo}, step = ${step}`);
+      
+//         for (let i = countFrom; i <= countTo; i += step) {
+//           console.log(i);
+//         }
+//       }
+      
+//       count(1, 5); // countFrom = 1, countTo = 5, step = 1
+//       count(2); // countFrom = 2, countTo = 10, step = 1
+//       count(); // countFrom = 0, countTo = 10, step = 1
+
+// ------------------------
+
+// function multiply() {
+//         let total = 1;
+      
+//         for (const argument of arguments) {
+//           total *= argument;
+//         }
+      
+//         return total;
+//       }
+      
+//       console.log(multiply(1, 2, 3)); //  6
+//       console.log(multiply(1, 2, 3, 4)); //  24
+//       console.log(multiply(1, 2, 3, 4, 5)); //  120
+
+// ------------------------
+
+// function withdraw(amount, balance) {
+//         if (amount === 0) {
+//           console.log("Для проведения операции введите сумму больше нуля");
+//         } else if (amount > balance) {
+//           console.log("Недостаточно средств на счету");
+//         } else {
+//           console.log("Операция снятия средств проведена успешно");
+//         }
+//       }
+
+
+      
+//       withdraw(0, 300); // "Для проведения операции введите сумму больше нуля"
+//       withdraw(500, 300); // "Недостаточно средств на счету"
+//       withdraw(100, 300); // "Операция снятия средств проведена успешно"
+
+// -------------------------
+
+// // ✅ Работает вызов до объявления
+// multiply(1, 2, 3);
+
+// function multiply(x, y, z) {
+//   console.log(`Результат умножения равен ${x * y * z}`);
+// }
+
+// // ✅ Работает вызов после объявления
+// multiply(4, 5, 6);
+
+// -------------------------
+// function calcSum(numOne, numTwo, more, less){
+//         let numSum = numOne + numTwo;
+
+//         if (numSum >= 3) {
+//                 more();
+//         } else {
+//                 less();
+//         }
+// }
+
+// function showMoreMessage(){
+//         console.log('Больше чем 3');
+
+// }
+
+// function showLessMessage(){
+//         console.log('Меньше чем 3');
+// }
+
+// calcSum(1, 5, showMoreMessage, showLessMessage)
+
+// ------------------------
+
+// function showName(){
+//         console.log('Вася!')
+// }
+// setTimeout(showName, 1000);
+// console.log('Коля!')
+
+
+// showMessage();
+// function showMessage(){
+//         console.log('Сообщение');
+// }
+
+
+
+// let showMessage = function(){
+//         console.log('Сообщение!')
+// }
+// showMessage();
+
+// ---------------------------
+
+// const logins = ['m4ngoDoge', 'kiwidab3st', 'polyiscute', 'aj4xth3n4n']
+
+// const findLogin = function (allLogins, loginToFind){
+
+//         // const message = allLogins.includes(loginToFind)
+//         // ? `Пользователь ${loginToFind} найден.`
+//         // : `Пользователь ${loginToFind} не найден.`
+
+//         // return message;
+
+
+//         return message = allLogins.includes(loginToFind)
+//         ? `Пользователь ${loginToFind} найден.`
+//         : `Пользователь ${loginToFind} не найден.`;
+
+         
+
+//         // for (const login of allLogins) {
+//         //         if(login === loginToFind){
+//         //                 return `Пользователь ${loginToFind} найден.`;
+//         //         }
+//         // }
+
+//         // return `Пользователь ${loginToFind} не найден.`;
+// }
+ 
+//      console.log(findLogin(logins, 'avocod3r'));
+//      console.log(findLogin(logins, 'kiwidab3st'));
+//      console.log(findLogin(logins, 'jam4l')); 
+//      console.log(findLogin(logins, 'polyiscute'));
+
+// -------------------------
+// -----Напиши функцию findSmallestNumber(numbers) для поиска
+// ---- самого маленького числа в массиве.
+
+
+// const findSmallestNumber = function (numbers) {
+//         let smallestNumber = numbers[0];
+
+//         for (const number of numbers){
+//                 if (number < smallestNumber){
+//                         smallestNumber = number;
+//                 }
+//         }
+
+//         return smallestNumber;
+// }
+
+// console.log(findSmallestNumber([3, 8, 12, -2, 15]));
+// console.log(findSmallestNumber([100, 54, 8, 12, 47]));
+// console.log(findSmallestNumber([7, 21, 84, 15, 4]));
+
+// ------------------------
+
+
+// const genres = ["Jazz", "Blues"];
+// genres.push("Rock'n'Roll")
+
+// console.log(genres.length)
+
+// ---------------
+
+// const fruits = ['apple', 'lemon', 'chery', 'strawberry', 'banan']
+// // for (let i = 0; i < fruits.length; i+=1) {
+// //     console.log(`${i+1} : ${fruits[i]}`);
+// // }
+// for(const fruit of fruits){
+//         console.log(fruit)
+// }
+
+// ------------------------
+
+// const numbers = [2, 17, 94, 1, -20, -50, 23, 37];
+
+// let minNumber = 0;
+// for(const number of numbers){
+//         if(number < minNumber){
+//                 minNumber = number
+//         }
+// }
+// console.log(minNumber)
+
+// let minNumber = numbers[0];
+
+// for (let i = 0; i < numbers.length; i+=1) {
+//        if (numbers[i] < minNumber) {
+//         minNumber = numbers[i];
+//        }
+        
+//        }
+//        console.log(minNumber)
+
+// ---------------------------
+
+// const genres = ["Jazz", "Blues", "Rock`n`Roll", "Country", "Reggy"];
+
+// let longestWord = genres[0];
+
+// for (const genre of genres){
+//         if (genre.length > longestWord.length) {
+//                 longestWord = genre;
+//         }
+// }
+
+// console.log(longestWord)
+
+// let shortlesWord = genres[0];
+
+// for (const genre of genres){
+//         if (genre.length < shortlesWord.length) {
+//                 shortlesWord = genre;
+//         }
+// }
+
+// console.log(shortlesWord)
+
+// -----------------------
+
+// const salaries = [200, 450, 600, 150, 300];
+// let total = 0;
+
+// // for (let i = 0; i < salaries.length; i+=1) {
+
+// //         total += salaries[i]
+        
+// // }
+// // console.log(total)
+
+// for (const salary of salaries) {
+//         total += salary
+// }
+
+// console.log(total)
+
+// ----------------
+
+// const managerSalaries = [1000, 1500, 2500, 4000, 5000];
+// const developersSalaries = [18000, 15000, 4000, 5000];
+
+// let total = 0;
+
+// for (const salary of managerSalaries) {
+//         total += salary
+// }
+
+// for (const salary of developersSalaries) {
+//         total += salary
+// }
+// console.log(total)
+
+// const allSalaries = managerSalaries.concat(developersSalaries)
+// let total = 0;
+
+// for (const salary of allSalaries) {
+//      total += salary;   
+// }
+// console.log(total);
+
+// ----------------------
+
+// Напиши скрипт дляя обчислення площі прямокутника зі сторонами
+// значення яких зберігаються в змінних значеннях у вигляді рядка.
+// Значення гарантовано розділені пробілом.
+
+// const values = '8 11';
+
+// const sidesArr = values.split(' ');
+
+// // console.log(sidesArr);
+
+// const area = Number(sidesArr[0]) * Number(sidesArr[1]);
+
+// console.log(area);
+
+// -----------------------
+
+//  Напиши скрипт, який виводить у консоль ім'я та телефон користувача.
+// У змінних names і phones зберігаються рядки імен та телефонних
+// номерів, розділені комами.
+// Порядковий номер імен та телефонів у рядках вказують на відповідність.
+// Кількість імен та телефонів гарантовано однакова.
+
+// const names = 'Jacob, William, Solomon, Artemis';
+// const phones = '89001234567,89001112233,890055566377,890055566300';
+
+// const namesArr = names.split(', ');
+// const phonesArr = phones.split(',');
+
+// // console.log(namesArr)
+// // console.log(phonesArr)
+
+// for (let i = 0; i < namesArr.length; i+=1) {
+//         console.log(`${namesArr[i]} - ${phonesArr[i]}`)
+// }
+
+// ---------------------
+
+// Напиши скрипт, який розвертає рядок(зворотній порядок букв)
+// та виводить її в консоль.
+
+
+// const string = 'Welcome to the future!';
+
+// const strToArr = string.split('');
+
+// const reverseStrToArr = strToArr.reverse();
+
+// const reverseString = reverseStrToArr.join('');
+// console.log(reverseString);
+
+// -----------------------
+
+// У нас є масив співробітників, відсортуйте його, щоб
+// співробітники не повторювалися.
+
+// const employees = ['Dennis', 'Dennis', 'Show', 'Watkins', 'Watkins','Ray'];
+
+// const filteredEmployees = [];
+
+// for (let i = 0; i < employees.length; i++) {
+//         // console.log(employees[i]);
+//         console.log(employees[i], 'index', i);
+//         console.log(employees[i], 'indexOf', employees.indexOf(employees[i]));
+//         console.log('------------');
+
+//         if (i===employees.indexOf(employees[i])) {
+//                 filteredEmployees.push(employees[i])
+//         }
+//         console.log(filteredEmployees);
+// }
+
+// -------------------
+
+// Співробітник Show звільнився, видаліть його з масиву.
+const employees = ['Dennis', 'Dennis', 'Show', 'Watkins', 'Watkins','Ray'];
+const index = employees.indexOf('Show');
+employees.splice(index, 1);
+console.log(employees)
